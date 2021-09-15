@@ -1,5 +1,10 @@
 # Sauce Demo E2E Tests for Adjust by Volha Sauchuk
 
+## Pre-requisites
+1. [Google Chrome](https://github.com/olgasavchuk/cypress-test)
+2. [node.js](https://nodejs.org/en/download/)
+3. [npm](https://docs.npmjs.com/getting-started)
+
 ## Technologies
 1. [cypress](https://www.cypress.io/)
 
