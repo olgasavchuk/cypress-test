@@ -27,8 +27,8 @@
 import loginPage from '../domain/loginPageClass'
 
 Cypress.Commands.add('login', () => {
-    cy.fixture('userData').then((user) => {
-        cy.visit('/')
-        loginPage.performLogin(user.username, user.password)
-    })
+  cy.fixture('userData').then((user) => {
+    cy.visit('/')
+    loginPage.performLogin(user.username, user.password)
+  })
 })

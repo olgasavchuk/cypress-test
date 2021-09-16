@@ -1,41 +1,33 @@
-import { 
-    ADD_TO_CART_BUTTON,
-    REMOVE_CART_BUTTON,
+import {
+  ADD_TO_CART_BUTTON,
+  REMOVE_CART_BUTTON
 } from '../locators/homePageElements'
 import header from './headerClass';
 
 class HomePage {
-    get addToCartButton() {
+  get addToCartButton() {
     return cy.get(ADD_TO_CART_BUTTON)
-    }
+  }
 
-    get removeButton() {
-        return cy.get(REMOVE_CART_BUTTON)
-    }
+  get removeButton() {
+    return cy.get(REMOVE_CART_BUTTON)
+  }
 
-    get shoppingCartBadge() {
-        return cy.get(SHOPPING_CART_BADGE)
-    }
+  addFirstItemToCart() {
+    this.addToCartButton.first().click()
+  }
 
-    get shoppingCartButton() {
-        return cy.get(SHOPPING_CART_BUTTON)
-    }
+  openShoppingCart() {
+    header.openShoppingCart()
+  }
 
-    addFirstItemToCart() {
-        this.addToCartButton.first().click()
-    }
+  validateRemoveButtonIsVisible() {
+    this.removeButton.should('be.visible')
+  }
 
-    openShoppingCart() {
-        header.openShoppingCart()
-    }
-
-    validateRemoveButtonIsVisible() {
-        this.removeButton.should('be.visible')
-    }
-
-    validateShoppingCartBadgeValue(number) {
-        header.validateShoppingCartBadgeValue(number)
-    }
+  validateShoppingCartBadgeValue(number) {
+    header.validateShoppingCartBadgeValue(number)
+  }
 }
 
 export default new HomePage()
