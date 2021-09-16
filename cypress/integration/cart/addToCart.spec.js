@@ -9,7 +9,7 @@ describe('Shopping cart tests', function() {
         cy.login()
     })
 
-    it('User should be able to add an item to the cart', function() {
+    it('User should be able to add an item to the cart', () => {
         let itemNumber = 1
         homePage.addFirstItemToCart()
         homePage.validateRemoveButtonIsVisible()
